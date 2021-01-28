@@ -1,0 +1,7 @@
+---
+applications:
+- name: social-worker-recording-tool-documentation
+  memory: 32M
+  buildpacks:
+  - staticfile_buildpack
+  path: ./build/
