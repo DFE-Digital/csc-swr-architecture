@@ -1,6 +1,6 @@
 # About
 
-This is the Technical Documentation supporting the Alpha phase of the Children Social Care Placement Service.
+This is the Technical Documentation supporting the Alpha phase of the Children Social Care Social Worker Recording Service.
 
 It utilises the [Tech Docs Template] in the [GitHub Tech Docs Code].
 
