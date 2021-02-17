@@ -2,47 +2,48 @@
 title: Environments
 weight: 25
 parent: /environments
-last_reviewed_on: 2021-01-12
-review_in: 3 months
+last_reviewed_on: 2020-12-17
+review_in: 7 weeks
 ---
 
 # Environments
 
-The following environment have been defined for the needs of the service during Alpha.
-
-<div class="govuk-inset-text">
-  Since Infrastructure as Code (IaC) is being used, environments can be spun up and torn down as needs change.
-</div>
+The following environments have been defined for the needs of the service during Alpha.
 
 
 ## Prototype
 
 __URL__: [Prototype Environment]
 
-__Repo__: [Prototype Repository]
+The prototype environment shows the deployment process for for the UI prototype through rapid iteration UX prototypes supporting face to face user research sessions
 
-This environment is used for rapid user feedback loops on high-fidelity clickable prototype.
+![Prototype](images/UIPrototype.png)
 
-![Prototype](images/Prototype.png)
+- Developer station, typically a laptop or workstation
+- Git client running on the developer station
+- GitHub source code repository
+- Heroku cloud platform
+
+Once ready, UI prototype code is pushed to GitHub and then pushed to to the Heroku cloud platform from where it is accessed during user research sessions.
 
 ## Development
 
 __URL__: [Development Environment]
 
-__Repo__: [Development Repository]
+The development environment shows the deployment process for the Social Worker Recording tool.
 
-This environment lays the foundations for the next phase in pulling requirements, via user stories, from the User Research, Service Design and Interaction Design streams.
+![Development](images/DevelopmentEnvironment.png)
 
-It will produce a steel thread, akin to bridge building, of features for the Beta to begin with.
+* Developer station, typically a laptop or workstation
+* Git client running on the developer station
+* GitHub source code repository
+* Docker Hub container registry
+* Gov.UK PaaS cloud platform within the AWS cloud
 
-![Development](images/Development.png)
+Once ready, developed code is pushed to the GitHub source code repository in a development code branch and a pull request raised. When changes to the development code branch have been successfully reviewed, the development code branch is merged into the 'main' code branch triggering a 'deploy to Gov.UK PaaS' GitHub Action which manages the required deployment pipeline tasks.
 
-## Demonstration
-
-__URL__: TBD
-
-This environment is yet to be built, and is envisaged as an environment to showcase code promoted Development, whilst being more stable to allow for user interactions.
-
-![Demonstration](images/Demonstration.png)
+<div class="govuk-inset-text">
+  Since the Terraform Infrastructure as Code (IaC) tool is being used to create, or amend, the Gov.UK PaaS cloud infrastructure, the development environment can be spun up and torn down as needs change.
+</div>
 
 <%= partial "partials/links" %>
