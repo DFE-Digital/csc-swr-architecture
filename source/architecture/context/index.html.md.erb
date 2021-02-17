@@ -2,20 +2,80 @@
 title: Context
 weight: 10
 parent: /architecture
-last_reviewed_on: 2021-01-07
-review_in: 3 months
+last_reviewed_on: 2020-12-17
+review_in: 7 weeks
 ---
 
 # Context
 
-These context diagrams are a good starting point, allowing visualisation of the big picture.
+These context diagrams present a visualisation of the big picture.
 
-The System Landscape Diagram highlights the 10,000 ft view of the system.
+## System Landscape Diagram
 
-![System Landscape](images/SystemLandscape.png)
+The System Landscape Diagram presents a 10,000ft view showing how software systems across the DfE and Local Authority enterprise bounds relate.
 
-Whilst the System Context zooms in a little...
+### As-Is System Landscape
 
-![System Context](images/SystemContext.png)
+The as-is system landscape represents the current landscape prior to DfE intervention.
+
+![As-Is System Landscape](images/system-landscape-as-is.png)
+
+* Children's Social Care users (Social Workers, Team Managers) interact with LA systems and services.
+
+### To-Be System Landscape
+
+The to-be system landscape represents the target landscape showing the perspective change following DfE interventions.
+
+![To-Be System Landscape](images/system-landscape-to-be.png)
+
+* Children's Social Care users interact through the DfE Social Worker Recording service acting as a Facade shielding the user from Dfe and Local Authority systems and services.
+
+## System Context
+
+The System Context Diagram is the highest level of abstraction.
+It represents something that delivers value to its users (people, roles or personas) or adjecent external systems.
+
+The following system contexts apply
+
+* Department for Education (DfE)
+* Local Authorities (LA)
+
+### Department for Education System Context Diagram
+
+The Social Worker Recording System Context presents a view of the SWR software system
+showing the system landscape within the bounds of the SWR context
+highlighting the users and adjacent systems that it interacts with.
+
+The principal focus here is on the people (actors, role, personas...) and software systems.
+It does not intend to show technologies, protocols or other low level details here.
+
+![DfE System Context](images/SWRSystemContext.png)
+
+#### Users
+
+* Children's Social Care
+  * Social Worker
+  * Team Manager
+* Care Child
+
+#### External systems
+
+* Amazon Web Services (AWS) Cloud
+* Gov.UK
+
+### Local Authority System Context Diagram
+
+The Local Authority System Context presents a view of the Local Authority software systems
+showing the system landscape within the bounds of the Local Authority context
+highlighting the users and adjacent systems that it interacts with.
+
+![LA System Context](images/LASystemContext.png)
+
+As with the DfE system context, the principal focus here is on the people (actors, role, personas...) and software systems.
+Similarly, it does not intend to show technologies, protocols or other low level details here.
+
+### Diagram Keys
+
+![Diagram Keys](images/LASystemContext.png)
 
 <%= partial 'partials/links' %>
